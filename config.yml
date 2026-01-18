@@ -1,17 +1,16 @@
 backend:
   name: git-gateway
-  branch: main # or master, depending on your branch name
+  branch: main # Double check if your GitHub branch is 'main' or 'master'
 
-media_folder: "assets/images"
-public_folder: "/assets/images"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "inventory"
     label: "Shop Inventory"
-    folder: "content/inventory" # This is where the suit files will be saved
+    folder: "content/inventory"
     create: true
     fields:
-      - {label: "Suit Name", name: "title", widget: "string"}
-      - {label: "Price (₦)", name: "price", widget: "string"}
-      - {label: "Photo", name: "image", widget: "image"}
-      - {label: "Details", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["suit", "collection", "solar", "books"] }
+      - { label: "Image", name: "image", widget: "image" }
