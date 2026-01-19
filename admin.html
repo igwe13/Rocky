@@ -3,10 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rocky House | Content Manager</title>
+  <title>Rocky House | Premium Management</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    /* Styling the Login Screen to match your Gold/Onyx brand */
+    #nc-root { background-color: #0a0a0a !important; }
+    .nc-github-authentication-button { background-color: #f39c12 !important; color: white !important; }
+  </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Premium Branding for the internal dashboard
+    CMS.registerPreviewStyle("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap");
+  </script>
 </body>
 </html>
