@@ -1,5 +1,5 @@
 ---
-title: Classic suit
-category: suit
-image: images/uploads/img_4965.jpeg
+title: "Joggers "
+category: collection
+image: images/uploads/img_4970.jpeg
 ---
