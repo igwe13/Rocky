@@ -1,16 +1,32 @@
 backend:
   name: git-gateway
-  branch: main # Double check if your GitHub branch is 'main' or 'master'
+  branch: main
 
 media_folder: "images/uploads"
-public_folder: "/images/uploads"
+public_folder: "images/uploads"
 
 collections:
   - name: "inventory"
     label: "Shop Inventory"
     folder: "content/inventory"
-    create: true
+    create: true # This allows her to add new clothes
+    delete: true # This allows her to REMOVE clothes
+    slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Product Title", name: "title", widget: "string" }
       - { label: "Category", name: "category", widget: "select", options: ["suit", "collection", "solar", "books"] }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Product Image", name: "image", widget: "image" }
+
+  - name: "settings"
+    label: "Site Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "contact_info"
+        label: "Contact & Socials"
+        file: "content/settings/contact.json"
+        fields:
+          - { label: "WhatsApp Number", name: "whatsapp", widget: "string" }
+          - { label: "Business Location", name: "address", widget: "text" }
+          - { label: "Shop Intro Text", name: "intro", widget: "text" }
